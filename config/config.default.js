@@ -21,8 +21,8 @@ module.exports = appInfo => {
     url: 'mongodb://localhost:27017',
     options: {
       useUnifiedTopology: true,
-      user: 'root',
-      pass: '20220407You@',
+      user: 'dev-cli',
+      pass: '20220407You',
       dbName: 'dev-cli',
     },
   };

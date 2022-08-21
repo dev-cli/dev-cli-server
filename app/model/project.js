@@ -4,6 +4,8 @@ module.exports = app => {
 
   const UserSchema = new Schema({
     package: { type: String },
+    name: { type: String },
+    version: { type: String }
   });
 
   return mongoose.model('Project', UserSchema);
