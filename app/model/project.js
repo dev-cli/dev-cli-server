@@ -7,6 +7,8 @@ module.exports = app => {
     name: { type: String },
     version: { type: String },
     type: { type: String },
+    installCommand:{ type: String },
+    startCommand:{ type: String },
   });
 
   return mongoose.model('Project', UserSchema);
