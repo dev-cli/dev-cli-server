@@ -5,7 +5,11 @@ const Controller = require('egg').Controller;
 class ProjectController extends Controller {
   async template() {
     const { ctx } = this;
-    const res = await ctx.model.Project.find({});
+    const opts = {}
+    if (ctx.query.tag) {
+      opts.tag = { $elemMatch: { $eq: ctx.query.tag } }
+    }
+    const res = await ctx.model.Project.find(opts);
     ctx.body = res;
   }
 }
